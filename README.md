@@ -56,6 +56,9 @@ $ cd C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools
 $ .\vsvars32.bat
 $ cd c:\src\0self\vimrc
 $ nmake -f Makefile.win reinstall
+
+$ "C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools\vsvars32.bat"
+$ nmake -f Makefile.win reinstall
 ```
 
 References
