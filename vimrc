@@ -1,7 +1,7 @@
 set nocompatible
 filetype off
 
-if ! exists('g:vimified_packages')
+if !exists('g:vimified_packages')
   let g:vimified_packages = ['general', ]
 endif
 
@@ -80,25 +80,29 @@ if count(g:vimified_packages, 'general')
 endif
 
 call vundle#end()
+
+""" general options
 filetype on
 filetype plugin on
 filetype plugin indent on
-
 syntax on
+
+""" coloring
 set t_Co=256
-" XXX(lhe) resolving the vim color won't get displayed properly under tmux
+" resolving the vim color won't get displayed properly under tmux
 if !has('nvim')
   if !has('gui_win32')
     set term=screen-256color
   endif
 endif
 
+""" colorscheme
 "set background=dark
 "colorscheme anotherdark
 
 """ molokai
-" XXX(lhe) make sure you disabled the blur and set term bgcolor to be the same
-" color as molokai bgcolor
+" make sure you disabled the blur and set term bgcolor to be the same color as
+" molokai bgcolor
 let g:molokai_original = 0
 let g:rehash256 = 1
 colorscheme molokai
@@ -161,7 +165,7 @@ if has("gui_running")
   endif
 endif
 
-""" pastt toggle
+""" paste toggle
 set pastetoggle=<F2>
 
 """ match whole line
@@ -203,6 +207,7 @@ augroup common
   autocmd FileType dot set ai sw=2 ts=2 et fo=croql
   autocmd FileType yaml set ai sw=2 ts=2 et fo=croql
   autocmd FileType xml set ai sw=2 ts=2 et fo=croql
+  autocmd FileType ui set ai sw=2 ts=2 et fo=croql
   autocmd FileType json set ai sw=2 ts=2 et fo=croql
   autocmd FileType proto set ai sw=2 ts=2 et fo=croql
   autocmd FileType sql set ai sw=2 ts=2 et fo=croql
@@ -213,11 +218,13 @@ augroup common
   "
   autocmd FileType java set ai sw=2 ts=2 et fo=croql
   autocmd BufEnter *.gradle set ai sw=4 ts=4 et fo=croql
+  "
+  autocmd FileType xml setlocal foldmethod=syntax
 augroup END
 
 """ clang-format
 "let g:clang_format#code_style = 'google'
-"let g:clang_format#auto_format=1
+"let g:clang_format#auto_format = 1
 
 """ yapf
 "let g:yapf_style = "google"
@@ -424,12 +431,11 @@ let g:syntastic_python_pylint_args = "--rcfile=~/.vim/etc/pylint.rc"
 "let g:syntastic_python_python_exec = '/usr/bin/python2.7'
 let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
 let g:syntastic_sh_checkers = ['shellcheck']
-
 "nnoremap <F3> :SyntasticToggleMode<CR>
 
 """ vim-go
 let g:go_fmt_command = "goimports"
-let g:go_fmt_autosave = 1 " enable fmt on save
+let g:go_fmt_autosave = 1
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
@@ -438,6 +444,9 @@ let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 let g:go_bin_path = expand("~/bin/go")
 let g:go_list_type = "quickfix"
+
+""" xmledit
+let g:xml_syntax_folding=1
 
 """ StripWhiteSpaces
 let g:auto_StripWhiteSpaces = 1
