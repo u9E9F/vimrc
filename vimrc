@@ -52,14 +52,18 @@ endif
 exec 'so '.fnameescape(s:home).'/custom/script/before/main.vim'
 
 call plug#begin('~/.vim/.plugins')
+  Plug 'inkarkat/vim-ingo-library'
+
   if index(g:bundle_group, 'view') >= 0
     Plug 'nathanaelkane/vim-indent-guides'
     Plug 'szw/vim-maximizer'
     Plug 'kshenoy/vim-signature'
     Plug 'jeffkreeftmeijer/vim-numbertoggle'
+    Plug 'inkarkat/vim-mark'
 
     exec 'so '.fnameescape(s:home).'/custom/plugin/indent-guides.vim'
     exec 'so '.fnameescape(s:home).'/custom/plugin/signature.vim'
+    exec 'so '.fnameescape(s:home).'/custom/plugin/vim-mark.vim'
   endif
 
   if index(g:bundle_group, 'edit') >= 0
@@ -78,7 +82,6 @@ call plug#begin('~/.vim/.plugins')
     Plug 'easymotion/vim-easymotion'
     Plug 'justinmk/vim-sneak'
     Plug 'tpope/vim-unimpaired'
-    Plug 'mbriggs/mark.vim'
 
     exec 'so '.fnameescape(s:home).'/custom/plugin/easymotion.vim'
     exec 'so '.fnameescape(s:home).'/custom/plugin/sneak.vim'
