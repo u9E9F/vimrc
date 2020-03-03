@@ -210,4 +210,3 @@ let mapleader="\\"
 exec 'so '.fnameescape(s:home).'/custom/script/tabstop.vim'
 exec 'so '.fnameescape(s:home).'/custom/script/MkNonExDir.vim'
 exec 'so '.fnameescape(s:home).'/custom/script/pass.vim'
-exec 'so '.fnameescape(s:home).'/custom/script/map_leader.vim'
