@@ -49,6 +49,9 @@ if !exists('g:bundle_group')
 endif
 
 """"""""""""""""""""""""""""""""""""""""
+
+" motions: http://vimdoc.sourceforge.net/htmldoc/motion.html
+
 exec 'so '.fnameescape(s:home).'/custom/script/before/main.vim'
 
 call plug#begin('~/.vim/.plugins')
@@ -80,13 +83,11 @@ call plug#begin('~/.vim/.plugins')
 
   if index(g:bundle_group, 'move') >= 0
     Plug 'easymotion/vim-easymotion'
-    Plug 'justinmk/vim-sneak'
     Plug 'tpope/vim-unimpaired'
+    Plug 't9md/vim-choosewin'
 
     exec 'so '.fnameescape(s:home).'/custom/plugin/easymotion.vim'
-    exec 'so '.fnameescape(s:home).'/custom/plugin/sneak.vim'
     exec 'so '.fnameescape(s:home).'/custom/plugin/unimpaired.vim'
-    exec 'so '.fnameescape(s:home).'/custom/plugin/mark.vim'
   endif
 
   if index(g:bundle_group, 'finder') >= 0
@@ -133,7 +134,6 @@ call plug#begin('~/.vim/.plugins')
     Plug 'kaiserhl/vim-snippets'
     Plug 'SirVer/ultisnips'
     Plug 'mh21/errormarker.vim'
-    Plug 't9md/vim-choosewin'
     Plug 'Shougo/echodoc.vim'
     Plug 'rhysd/vim-grammarous'
 
