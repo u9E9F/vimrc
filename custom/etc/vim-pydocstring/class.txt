@@ -1,0 +1,10 @@
+"""{{ name }}.
+
+Note:
+
+Args:
+
+Attributes:
+
+Example(s): [optional]
+"""
