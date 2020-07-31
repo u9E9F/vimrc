@@ -14,4 +14,12 @@ let g:NERDTreeDirArrows = 1
 let g:NERDTreeQuitOnOpen = 1
 let g:NERDTreeMapJumpNextSibling = ""
 let g:NERDTreeMapJumpPrevSibling = ""
-let g:NERDTreeIgnore = ['\.pyc$[[file]]', '\.svn$[[dir]]', '\.class$[[file]]', '\.jar$[[file]]', '\.git$[[dir]]']
+let g:NERDTreeIgnore = [
+      \ '\.pyc$[[file]]',
+      \ '\.svn$[[dir]]',
+      \ '\.class$[[file]]',
+      \ '\.jar$[[file]]',
+      \ '\.git$[[dir]]',
+      \ '\.mypy_cache$[[dir]]',
+      \ '\.pytest_cache$[[dir]]'
+\ ]
