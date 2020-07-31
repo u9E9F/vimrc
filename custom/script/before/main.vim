@@ -54,6 +54,9 @@ set shell=zsh
 
 set number relativenumber
 
+set modeline
+set modelines=5
+
 """""""""""""""""""""
 " Disabling vim's autocomment;
 " see http://stackoverflow.com/questions/6076592/vim-set-formatoptions-being-lost
