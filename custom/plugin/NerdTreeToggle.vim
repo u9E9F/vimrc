@@ -15,11 +15,12 @@ let g:NERDTreeQuitOnOpen = 1
 let g:NERDTreeMapJumpNextSibling = ""
 let g:NERDTreeMapJumpPrevSibling = ""
 let g:NERDTreeIgnore = [
-      \ '\.pyc$[[file]]',
-      \ '\.svn$[[dir]]',
-      \ '\.class$[[file]]',
-      \ '\.jar$[[file]]',
-      \ '\.git$[[dir]]',
-      \ '\.mypy_cache$[[dir]]',
-      \ '\.pytest_cache$[[dir]]'
-\ ]
+    \ '\.pyc$[[file]]',
+    \ '\.mypy_cache$[[dir]]',
+    \ '\.pytest_cache$[[dir]]',
+    \ '\.svn$[[dir]]',
+    \ '\.class$[[file]]',
+    \ '\.jar$[[file]]',
+    \ '\.git$[[dir]]',
+    \ '^node_modules$[[dir]]',
+  \ ]
