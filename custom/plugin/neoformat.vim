@@ -90,7 +90,7 @@ let g:neoformat_tf_terraform = {
 " YAML
 let g:neoformat_enabled_yaml = ['pyaml']
 let g:neoformat_yaml_pyaml = {
-            \ 'exe': 'python3',
+            \ 'exe': '/usr/bin/python3',
             \ 'args': ['-m', 'pyaml'],
             \ }"
 
