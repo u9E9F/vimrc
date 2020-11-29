@@ -137,6 +137,7 @@ call plug#begin('~/.vim/.plugins')
     Plug 'mh21/errormarker.vim'
     Plug 'Shougo/echodoc.vim'
     Plug 'rhysd/vim-grammarous'
+    Plug 'pseewald/vim-anyfold'
 
     Plug 'octol/vim-cpp-enhanced-highlight', {'for':['c', 'cpp']}
     Plug 'mrtazz/DoxygenToolkit.vim', {'for':['c', 'cpp']}
@@ -151,6 +152,7 @@ call plug#begin('~/.vim/.plugins')
     Plug 'rust-lang/rust.vim', {'for': 'rust'}
     Plug 'heavenshell/vim-pydocstring', {'for':'python'}
 
+    exec 'so '.fnameescape(s:home).'/custom/plugin/anyfold.vim'
     exec 'so '.fnameescape(s:home).'/custom/plugin/startify.vim'
     exec 'so '.fnameescape(s:home).'/custom/plugin/errormarker.vim'
     exec 'so '.fnameescape(s:home).'/custom/plugin/UltiSnips.vim'
