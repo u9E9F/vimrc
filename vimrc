@@ -41,6 +41,7 @@ if !exists('g:bundle_group')
     \ 'view',
     \ 'move',
     \ 'edit',
+    \ 'win',
     \
     \ 'code',
     \ 'text',
@@ -57,6 +58,14 @@ exec 'so '.fnameescape(s:home).'/custom/script/before/main.vim'
 call plug#begin('~/.vim/.plugins')
   Plug 'inkarkat/vim-ingo-library'
   Plug 'tpope/vim-obsession'
+
+  if index(g:bundle_group, 'win') >= 0
+    Plug 'simeji/winresizer'
+    Plug 't9md/vim-choosewin'
+
+    exec 'so '.fnameescape(s:home).'/custom/plugin/choosewin.vim'
+    exec 'so '.fnameescape(s:home).'/custom/plugin/winresizer.vim'
+  endif
 
   if index(g:bundle_group, 'view') >= 0
     Plug 'nathanaelkane/vim-indent-guides'
@@ -85,7 +94,6 @@ call plug#begin('~/.vim/.plugins')
   if index(g:bundle_group, 'move') >= 0
     Plug 'easymotion/vim-easymotion'
     Plug 'tpope/vim-unimpaired'
-    Plug 't9md/vim-choosewin'
 
     exec 'so '.fnameescape(s:home).'/custom/plugin/easymotion.vim'
     exec 'so '.fnameescape(s:home).'/custom/plugin/unimpaired.vim'
@@ -114,7 +122,6 @@ call plug#begin('~/.vim/.plugins')
     exec 'so '.fnameescape(s:home).'/custom/plugin/NerdTreeToggle.vim'
     exec 'so '.fnameescape(s:home).'/custom/plugin/asyncrun.vim'
   endif
-
 
   if index(g:bundle_group, 'molokai') >= 0
     Plug 'fatih/molokai'
