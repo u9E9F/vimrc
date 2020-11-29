@@ -13,3 +13,4 @@ let g:airline#extensions#tabline#show_buffers = 1
 let g:airline#extensions#tabline#disable_refresh = 0
 let g:airline#extensions#tabline#show_tabs = 0
 
+"let g:airline_section_x = '%{ObsessionStatus()}'
