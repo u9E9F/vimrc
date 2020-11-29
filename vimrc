@@ -56,6 +56,7 @@ exec 'so '.fnameescape(s:home).'/custom/script/before/main.vim'
 
 call plug#begin('~/.vim/.plugins')
   Plug 'inkarkat/vim-ingo-library'
+  Plug 'tpope/vim-obsession'
 
   if index(g:bundle_group, 'view') >= 0
     Plug 'nathanaelkane/vim-indent-guides'

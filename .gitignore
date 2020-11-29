@@ -17,3 +17,6 @@ bundle/
 
 .mypy_cache
 __pycache__
+
+# mksession
+Session.vim
