@@ -71,4 +71,4 @@ let g:ale_cache_executable_check_failures = 1
 "let g:ale_lint_on_save = 0
 "let g:ale_lint_on_text_changed = 0
 "let g:ale_lint_on_insert_leave = 0
-let g:ale_enabled = 0
+let g:ale_enabled = 1
