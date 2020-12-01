@@ -152,6 +152,7 @@ call plug#begin('~/.vim/.plugins')
     Plug 'dhruvasagar/vim-table-mode', {'for':['md']}
     Plug 'justinmk/vim-syntax-extra', {'for': ['c', 'bison', 'flex', 'cpp']}
     Plug 'vim-python/python-syntax', {'for': ['python']}
+    Plug 'tell-k/vim-autoflake', {'for': ['python']}
     Plug 'fisadev/vim-isort', {'for': ['python']}
     Plug 'sukima/xmledit', {'for':['html', 'xml']}
     Plug 'pprovost/vim-ps1', {'for': 'ps1'}
@@ -168,6 +169,7 @@ call plug#begin('~/.vim/.plugins')
     exec 'so '.fnameescape(s:home).'/custom/plugin/vim-cpp-enhanced-highlight.vim'
     exec 'so '.fnameescape(s:home).'/custom/plugin/vim-pydocstring.vim'
     exec 'so '.fnameescape(s:home).'/custom/plugin/isort.vim'
+    exec 'so '.fnameescape(s:home).'/custom/plugin/autoflake.vim'
   endif
 
   if index(g:bundle_group, 'ale') >= 0
