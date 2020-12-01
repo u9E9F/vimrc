@@ -23,4 +23,5 @@
 "
 " Sneak works with Vim 7.2+ (|sneak-label-mode| requires Vim 7.3+).
 
-let g:sneak#label = 1
+let g:sneak#label = 0
+let g:sneak#s_next = 1
