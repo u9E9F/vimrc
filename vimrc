@@ -62,6 +62,7 @@ call plug#begin('~/.vim/.plugins')
   if index(g:bundle_group, 'win') >= 0
     Plug 'simeji/winresizer'
     Plug 't9md/vim-choosewin'
+    Plug 'szw/vim-maximizer'
 
     exec 'so '.fnameescape(s:home).'/custom/plugin/choosewin.vim'
     exec 'so '.fnameescape(s:home).'/custom/plugin/winresizer.vim'
@@ -69,7 +70,6 @@ call plug#begin('~/.vim/.plugins')
 
   if index(g:bundle_group, 'view') >= 0
     Plug 'nathanaelkane/vim-indent-guides'
-    Plug 'szw/vim-maximizer'
     Plug 'kshenoy/vim-signature'
     Plug 'jeffkreeftmeijer/vim-numbertoggle'
     Plug 'inkarkat/vim-mark'
@@ -94,8 +94,12 @@ call plug#begin('~/.vim/.plugins')
   if index(g:bundle_group, 'move') >= 0
     Plug 'easymotion/vim-easymotion'
     Plug 'tpope/vim-unimpaired'
+    Plug 'haya14busa/incsearch.vim'
+    Plug 'haya14busa/incsearch-fuzzy.vim'
+    Plug 'haya14busa/incsearch-easymotion.vim'
 
     exec 'so '.fnameescape(s:home).'/custom/plugin/easymotion.vim'
+    exec 'so '.fnameescape(s:home).'/custom/plugin/incsearch-easymotion.vim'
     exec 'so '.fnameescape(s:home).'/custom/plugin/unimpaired.vim'
   endif
 
