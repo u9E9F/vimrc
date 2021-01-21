@@ -87,6 +87,15 @@ let g:neoformat_tf_terraform = {
             \ 'stdin': 1,
             \ }"
 
+" HCL
+let g:neoformat_enabled_hcl = ['packer']
+let g:neoformat_hcl_packer = {
+            \ 'exe': 'packer',
+            \ 'args': ['fmt'],
+            \ 'replace': 1,
+            \ }"
+
+
 " YAML
 let g:neoformat_enabled_yaml = ['pyaml']
 let g:neoformat_yaml_pyaml = {

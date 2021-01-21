@@ -49,6 +49,7 @@ augroup common
   autocmd FileType *.conf set ai sw=2 ts=2 et fo=croql
   "
   autocmd FileType tf set ai sw=2 ts=2 et fo=croql
+  autocmd FileType hcl set ai sw=2 ts=2 et fo=croql
   "
   autocmd FileType java set ai sw=2 ts=2 et fo=croql
   autocmd BufEnter *.gradle set ai sw=4 ts=4 et fo=croql
