@@ -57,3 +57,5 @@
 "  \ 'ctrl-x': 'split',
 "  \ 'ctrl-v': 'vsplit' }
 
+
+let g:fzf_layout = { 'down': '20%' }
