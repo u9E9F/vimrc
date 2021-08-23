@@ -27,6 +27,8 @@ augroup common
   autocmd FileType html set ai sw=2 ts=2 et fo=croql
   autocmd FileType css set ai sw=2 ts=2 et fo=croql
   autocmd FileType javascript set ai sw=2 ts=2 et fo=croql
+  autocmd FileType typescript set ai sw=2 ts=2 et fo=croql
+  autocmd FileType typescriptreact set ai sw=2 ts=2 et fo=croql
   "
   autocmd FileType vim set ai sw=2 ts=2 et fo=croql
   autocmd FileType vim,tex let b:autoformat_autoindent=0
