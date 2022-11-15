@@ -58,6 +58,7 @@ exec 'so '.fnameescape(s:home).'/custom/script/before/main.vim'
 call plug#begin('~/.vim/.plugins')
   Plug 'inkarkat/vim-ingo-library'
   Plug 'tpope/vim-obsession'
+  Plug 'ojroques/vim-oscyank', {'branch': 'main'}
 
   if index(g:bundle_group, 'win') >= 0
     Plug 'simeji/winresizer'
@@ -228,3 +229,7 @@ let mapleader="\\"
 exec 'so '.fnameescape(s:home).'/custom/script/tabstop.vim'
 exec 'so '.fnameescape(s:home).'/custom/script/MkNonExDir.vim'
 exec 'so '.fnameescape(s:home).'/custom/script/pass.vim'
+
+vnoremap <leader>c :OSCYank<CR>
+let g:oscyank_max_length = 1000000
+let g:oscyank_term = 'tmux'

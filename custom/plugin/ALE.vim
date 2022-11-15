@@ -61,7 +61,7 @@ let g:ale_cpp_cppcheck_options = ''
 "let g:ale_python_pylint_options = '--rcfile='.s:lintcfg('pylint.conf')
 let g:ale_python_flake8_executable = 'flake8'
 let g:ale_python_flake8_use_global = 1
-let g:ale_python_flake8_options = '--conf='.s:lintcfg('flake8.conf')
+"let g:ale_python_flake8_options = '--conf='.s:lintcfg('flake8.conf')
 
 " https://github.com/dense-analysis/ale/issues/1914
 let g:ale_cache_executable_check_failures = 1
