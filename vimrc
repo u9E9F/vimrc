@@ -34,14 +34,15 @@ if !exists('g:bundle_group')
     \ 'airline',
     \ 'finder',
     \
-    \ 'magic-yank',
-    \ 'neoformat',
     \ 'code',
+    \ 'format',
+    \ 'lint',
+    \
     \ 'text',
-    "\ 'gutentags',
-    "\ 'ale',
   \ ]
 endif
+"\ 'gutentags',
+"\ 'lint',
 
 """"""""""""""""""""""""""""""""""""""""
 
@@ -50,32 +51,35 @@ endif
 exec 'so '.fnameescape(s:home).'/custom/before.vim'
 
 call plug#begin('~/.vim/.plugins')
+  Plug 'ojroques/vim-oscyank', {'branch': 'main'}
   " library
   Plug 'inkarkat/vim-ingo-library'
-  " session management
-  Plug 'tpope/vim-obsession'
-  Plug 'ojroques/vim-oscyank', {'branch': 'main'}
+  " startify
+  Plug 'mhinz/vim-startify'
+  "
+  Plug 'tpope/vim-eunuch'
   " supertab
   Plug 'ervandew/supertab'
   " '.' for everything
   Plug 'tpope/vim-repeat'
-  " startify
-  Plug 'mhinz/vim-startify'
-  " theme
-  Plug 'fatih/molokai'
-  "
-  Plug 'mhinz/vim-signify'
-  Plug 'ntpeters/vim-better-whitespace'
-  " grammar check
-  Plug 'rhysd/vim-grammarous'
-  "
-  Plug 'tpope/vim-eunuch'
-  Plug 'scrooloose/nerdtree'
-  Plug 'skywind3000/asyncrun.vim'
   " search
   Plug 'haya14busa/incsearch.vim'
   Plug 'haya14busa/incsearch-fuzzy.vim'
   Plug 'haya14busa/incsearch-easymotion.vim'
+  " theme
+  Plug 'fatih/molokai'
+  "
+  Plug 'mhinz/vim-signify'
+  "
+  Plug 'ntpeters/vim-better-whitespace'
+  " grammar check
+  Plug 'rhysd/vim-grammarous'
+  "
+  Plug 'scrooloose/nerdtree'
+
+  " session management
+  "Plug 'tpope/vim-obsession'
+  "Plug 'skywind3000/asyncrun.vim'
 
   if index(g:bundle_group, 'move') >= 0
     Plug 'easymotion/vim-easymotion'
@@ -102,9 +106,9 @@ call plug#begin('~/.vim/.plugins')
   endif
 
   if index(g:bundle_group, 'view') >= 0
+    Plug 'jeffkreeftmeijer/vim-numbertoggle'
     Plug 'nathanaelkane/vim-indent-guides'
     Plug 'kshenoy/vim-signature'
-    Plug 'jeffkreeftmeijer/vim-numbertoggle'
     Plug 'inkarkat/vim-mark'
 
     exec 'so '.fnameescape(s:home).'/custom/plugin/indent-guides.vim'
@@ -127,17 +131,11 @@ call plug#begin('~/.vim/.plugins')
     exec 'so '.fnameescape(s:home).'/custom/plugin/fzf.vim'
   endif
 
-  if index(g:bundle_group, 'magic-yank') >= 0
-    Plug 'fcpg/vim-osc52'
-
-    xmap <F9> y:call SendViaOSC52(getreg('"'))<cr>
-  endif
-
   if index(g:bundle_group, 'code') >= 0
     Plug 'scrooloose/nerdcommenter'
     Plug 'tpope/vim-projectionist'
-    Plug 'kaiserhl/vim-snippets'
-    Plug 'SirVer/ultisnips'
+    "Plug 'kaiserhl/vim-snippets'
+    "Plug 'SirVer/ultisnips'
     Plug 'pseewald/vim-anyfold'
 
     "Plug 'mh21/errormarker.vim'
@@ -149,13 +147,13 @@ call plug#begin('~/.vim/.plugins')
     Plug 'dhruvasagar/vim-table-mode', {'for':['md']}
     Plug 'justinmk/vim-syntax-extra', {'for': ['c', 'bison', 'flex', 'cpp']}
     Plug 'vim-python/python-syntax', {'for': ['python']}
-    Plug 'fisadev/vim-isort', {'for': ['python']}
     Plug 'sukima/xmledit', {'for':['html', 'xml']}
     Plug 'pprovost/vim-ps1', {'for': 'ps1'}
     Plug 'tbastos/vim-lua', {'for': 'lua'}
     Plug 'rust-lang/rust.vim', {'for': 'rust'}
-    Plug 'heavenshell/vim-pydocstring', {'for':'python'}
 
+    Plug 'heavenshell/vim-pydocstring', {'for':'python'}
+    Plug 'fisadev/vim-isort', {'for': ['python']}
     "Plug 'tell-k/vim-autoflake', {'for': ['python']}
 
     exec 'so '.fnameescape(s:home).'/custom/plugin/anyfold.vim'
@@ -169,23 +167,22 @@ call plug#begin('~/.vim/.plugins')
     "exec 'so '.fnameescape(s:home).'/custom/plugin/autoflake.vim'
   endif
 
-  if index(g:bundle_group, 'ale') >= 0
-    Plug 'w0rp/ale'
-
-    exec 'so '.fnameescape(s:home).'/custom/plugin/ALE.vim'
-  endif
-
-  if index(g:bundle_group, 'neoformat') >= 0
+  if index(g:bundle_group, 'format') >= 0
     Plug 'sbdchd/neoformat'
 
     exec 'so '.fnameescape(s:home).'/custom/plugin/neoformat.vim'
   endif
 
-  if index(g:bundle_group, 'gutentags') >= 0
-    Plug 'ludovicchabant/vim-gutentags'
+  if index(g:bundle_group, 'lint') >= 0
+    Plug 'w0rp/ale'
 
-    exec 'so '.fnameescape(s:home).'/custom/plugin/gutentags.vim'
+    exec 'so '.fnameescape(s:home).'/custom/plugin/ALE.vim'
   endif
+
+  "if index(g:bundle_group, 'gutentags') >= 0
+  "  Plug 'ludovicchabant/vim-gutentags'
+  "  exec 'so '.fnameescape(s:home).'/custom/plugin/gutentags.vim'
+  "endif
 
   if index(g:bundle_group, 'text') >= 0
     Plug 'kana/vim-textobj-user'
@@ -196,13 +193,12 @@ call plug#begin('~/.vim/.plugins')
     Plug 'bps/vim-textobj-python', {'for': 'python'}
     Plug 'jceb/vim-textobj-uri'
   endif
-
 call plug#end()
 
 exec 'so '.fnameescape(s:home).'/custom/plugin/startify.vim'
 exec 'so '.fnameescape(s:home).'/custom/plugin/molokai.vim'
 exec 'so '.fnameescape(s:home).'/custom/plugin/NerdTreeToggle.vim'
-exec 'so '.fnameescape(s:home).'/custom/plugin/asyncrun.vim'
+"exec 'so '.fnameescape(s:home).'/custom/plugin/asyncrun.vim'
 exec 'so '.fnameescape(s:home).'/custom/plugin/incsearch-easymotion.vim'
 
 """"""""""""""""""""""""""""""""""""""""
