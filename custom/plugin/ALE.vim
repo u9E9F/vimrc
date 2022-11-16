@@ -1,8 +1,3 @@
-""""""""""""""""""""""""""""""""""""""""
-" 'w0rp/ale'
-"
-" ALEComplete
-"
 " - https://www.zhihu.com/question/47691414/answer/373700711
 "
 "let g:ale_fixers = {
