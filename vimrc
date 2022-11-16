@@ -51,6 +51,7 @@ endif
 exec 'so '.fnameescape(s:home).'/custom/before.vim'
 
 call plug#begin('~/.vim/.plugins')
+  " oscyank
   Plug 'ojroques/vim-oscyank', {'branch': 'main'}
   " library
   Plug 'inkarkat/vim-ingo-library'
@@ -198,8 +199,8 @@ call plug#end()
 exec 'so '.fnameescape(s:home).'/custom/plugin/startify.vim'
 exec 'so '.fnameescape(s:home).'/custom/plugin/molokai.vim'
 exec 'so '.fnameescape(s:home).'/custom/plugin/NerdTreeToggle.vim'
-"exec 'so '.fnameescape(s:home).'/custom/plugin/asyncrun.vim'
 exec 'so '.fnameescape(s:home).'/custom/plugin/incsearch-easymotion.vim'
+"exec 'so '.fnameescape(s:home).'/custom/plugin/asyncrun.vim'
 
 """"""""""""""""""""""""""""""""""""""""
 filetype on
@@ -218,6 +219,7 @@ exec 'so '.fnameescape(s:home).'/custom/tabstop.vim'
 exec 'so '.fnameescape(s:home).'/custom/script/MkNonExDir.vim'
 exec 'so '.fnameescape(s:home).'/custom/script/pass.vim'
 
-vnoremap <leader>c :OSCYank<CR>
-let g:oscyank_max_length = 1000000
-let g:oscyank_term = 'tmux'
+""""""""""""""""""""
+"vnoremap <leader>c :OSCYank<CR>
+"let g:oscyank_max_length = 1000000
+"let g:oscyank_term = 'tmux'
