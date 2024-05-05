@@ -31,7 +31,8 @@ augroup common
   autocmd FileType typescriptreact set ai sw=2 ts=2 et fo=croql
   "
   autocmd FileType vim set ai sw=2 ts=2 et fo=croql
-  autocmd FileType vim,tex let b:autoformat_autoindent=0
+  autocmd FileType tex set ai sw=2 ts=2 et fo=croql
+  autocmd FileType vim let b:autoformat_autoindent=0
   autocmd FileType plaintex set ai sw=4 ts=4 et fo=croql
   "
   autocmd FileType markdown set ai sw=2 ts=2 et fo=croql
