@@ -9,6 +9,7 @@ Unix
 ### step1
 ```
 make reinstall
+make vim=/usr/bin/vim reinstall
 ```
 
 Windows
